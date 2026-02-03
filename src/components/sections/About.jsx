@@ -1,8 +1,9 @@
 import { RevealOnScroll } from "../RevealOnScroll"
 
 export const About = () => {
-    const frontendSkills = ["React", "TailwindCSS"];
-    const backendSkills = ["Node.js", "Python"];
+    const frontendSkills = ["React", "CSS", "TailwindCSS", "Vite"];
+    const backendSkills = ["Node.js", "Python", "Java", "C", "Linux", "Git", "API Implementation", "DSA"];
+    const dataMLSkills = ["NumPy", "Pandas", "Matplotlib", "SciPy"]
   
     return (
       <section 
@@ -17,7 +18,11 @@ export const About = () => {
           </h2>
   
           <div className="rounded-xl p-8 border border-transparent hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">something about me</p>
+            <p className="text-gray-300 mb-6">
+            My coursework at Dartmouth has prepared me for <strong>software and algorithmn development, statistical analysis, mathematical modeling, and numerical analysis</strong>. 
+            I have developed a broad range of skill sets from project and research work. 
+            My interests outside of the classroom include music, hiking, and teaching. 
+            </p>
   
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Frontend */}
@@ -42,13 +47,29 @@ export const About = () => {
                   {backendSkills.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-green-500/10 text-green-400 py-1 px-3 rounded-full text-sm hover:bg-green-500/20 hover:shadow-[0_2px_8px_rgba(34,197,94,0.2)] transition"
+                      className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-green-500/20 hover:shadow-[0_2px_8px_rgba(34,197,94,0.2)] transition"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
+
+              {/* Data */}
+              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                <h3 className="text-xl font-bold mb-4">Data / ML</h3>
+                <div className="flex flex-wrap gap-2">
+                  {dataMLSkills.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </div>
 
