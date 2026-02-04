@@ -8,13 +8,17 @@ export const Contact = () => {
     >
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-10 bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">
             Get in Touch
           </h2>
 
+          <p className="text-gray-300 mb-10 leading-relaxed">
+            I’m always happy to connect — find me on LinkedIn or at the email address below!
+          </p>
+
           <div className="flex flex-col items-center space-y-4">
             {/* Email */}
-            <p className="text-gray-300 text-xl">
+            <p className="text-gray-300">
               Email:{" "}
               <a
                 href="mailto:isabela.fenner.27@dartmouth.edu"
@@ -25,7 +29,7 @@ export const Contact = () => {
             </p>
 
             {/* Links */}
-            <div className="flex text-xl space-x-8 pt-4">
+            <div className="flex space-x-8 pt-4">
               <a
                 href="https://www.linkedin.com/in/isabelafenner"
                 target="_blank"

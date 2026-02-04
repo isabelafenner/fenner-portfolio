@@ -1,9 +1,38 @@
 import { RevealOnScroll } from "../RevealOnScroll"
+import { SiPython, SiNumpy, SiPandas, SiJupyter, SiReact, SiTailwindcss, SiGit } from "react-icons/si";
+import { EducationExperience } from "../EducationExperience";
+
+const icons = [
+  { Icon: SiPython, color: "#3776AB" },
+  { Icon: SiNumpy, color: "#013243" },
+  { Icon: SiPandas, color: "#150458" },
+  { Icon: SiJupyter, color: "#F37626" },
+  { Icon: SiReact, color: "#61DAFB" },
+  { Icon: SiTailwindcss, color: "#38BDF8" },
+  { Icon: SiGit, color: "#F05032" },
+];
+
+export const SkillIcons = () => (
+  <div className="mt-4 flex items-center justify-center gap-8">
+    {icons.map(({ Icon, color }, i) => (
+      <Icon
+        key={i}
+        className="text-3xl hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition"
+        style={{ color }}
+        onMouseEnter={(e) => (e.currentTarget.style.color = color)}
+        onMouseLeave={(e) => (e.currentTarget.style.color = "")}
+      />
+    ))}
+  </div>
+);
+
+
 
 export const About = () => {
-    const frontendSkills = ["React", "CSS", "TailwindCSS", "Vite"];
-    const backendSkills = ["Node.js", "Python", "Java", "C", "Linux", "Git", "API Implementation", "DSA"];
-    const dataMLSkills = ["NumPy", "Pandas", "Matplotlib", "SciPy"]
+    const languages = ["Python", "C", "Java", "JavaScript", "SQL", "Bash"]
+    const frontendSkills = ["React", "TailwindCSS", "Vite"];
+    const backendSkills = ["Node.js", "Linux", "Git", "API Implementation", "DSA"];
+    const dataMLSkills = ["NumPy", "Pandas", "Matplotlib", "SciPy", "Sklearn", "Seaborn"]
   
     return (
       <section 
@@ -19,35 +48,21 @@ export const About = () => {
   
           <div className="rounded-xl p-8 border border-transparent hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
-            My coursework at Dartmouth has prepared me for <strong>software and algorithmn development, statistical analysis, mathematical modeling, and numerical analysis</strong>. 
-            I have developed a broad range of skill sets from project and research work. 
+            My course, project, and research work at Dartmouth has prepared me for <strong>software and algorithmn development, statistical analysis, mathematical modeling, and numerical analysis</strong>. 
             My interests outside of the classroom include music, hiking, and teaching. 
             </p>
+
+            <EducationExperience />
   
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Frontend */}
+              {/* Languages */}
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Frontend</h3>
+                <h3 className="text-xl font-bold mb-4">Languages</h3>
                 <div className="flex flex-wrap gap-2">
-                  {frontendSkills.map((tech) => (
+                  {languages.map((tech) => (
                     <span
                       key={tech}
                       className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-  
-              {/* Backend */}
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Backend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-green-500/20 hover:shadow-[0_2px_8px_rgba(34,197,94,0.2)] transition"
                     >
                       {tech}
                     </span>
@@ -70,28 +85,40 @@ export const About = () => {
                 </div>
               </div>
 
+              {/* Frontend */}
+              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                <h3 className="text-xl font-bold mb-4">Frontend</h3>
+                <div className="flex flex-wrap gap-2">
+                  {frontendSkills.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+  
+              {/* Backend */}
+              <div className="rounded-xl p-6 mb-4 hover:-translate-y-1 transition-all">
+                <h3 className="text-xl font-bold mb-4">Backend</h3>
+                <div className="flex flex-wrap gap-2">
+                  {backendSkills.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(34,197,94,0.2)] transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
             </div>
+            <SkillIcons />
           </div>
 
-          <div className="grid gird-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="p-6 rounded-xl border-transparent border hover:-translate-y-1 transition-all">
-                    <h3 className="text-xl fond-bold mb-4">
-                        Education
-                    </h3>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
-                        <li>
-                            <strong>
-                                B.A. in Math and Computer Science
-                            </strong>
-                        </li>
-                        <li>
-                                Relevant Coursework: Software Design and Implementation
-                        </li>
-                    </ul>
-
-            </div>
-
-          </div>
         </div>
         </RevealOnScroll>
       </section>
