@@ -14,7 +14,7 @@ export const Home = () => {
             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
                 I am a <strong>Dartmouth '27</strong> studying <strong> Computer Science, Applied Math, and French</strong>. 
                 I am passionate about applying my quantitative skills to real-world problems, 
-            and I am interested in the intersection of technology and healthcare, as well as computational modeling and financial markets. 
+            and I am interested in the intersection of technology with human-centered domains like healthcare, music, and economics. 
             </p>
             
             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">

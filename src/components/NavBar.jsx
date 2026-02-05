@@ -33,7 +33,7 @@ export const NavBar = ({ menuOpen, setMenuOpen }) => {
             {/* mobile button */}
             <button
               type="button"
-              className="md:hidden z-50 text-white text-3xl leading-none w-10 h-10 flex items-center justify-center rounded hover:bg-white/10 transition"
+              className="md:hidden z-50 text-white text-3xl leading-none w-10 h-10 flex items-center justify-center rounded hover:bg-white/10 transition mr-4"
               onClick={() => setMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={menuOpen}

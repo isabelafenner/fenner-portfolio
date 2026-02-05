@@ -88,7 +88,7 @@ export const EducationExperience = () => {
               <p className="text-gray-500 text-sm mt-1">2023–2027</p>
 
               <div className="mt-6 space-y-4">
-                <Collapsible title="Relevant Coursework" defaultOpen>
+                <Collapsible title="Relevant Coursework" >
                   <ul className="space-y-2 text-gray-300">
                     {courses.map((c) => (
                       <li key={c}>• {c}</li>
